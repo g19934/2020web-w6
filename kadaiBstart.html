@@ -46,8 +46,8 @@
 
     const num = 10;
     const winner = Math.floor(Math.random() * num); // 0 - 4
-    const chu=1;
-    const kyo=2;
+    const chu=Math.floor(Math.random() * num);
+    const kyo=Math.floor(Math.random() * num);
 
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
