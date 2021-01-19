@@ -42,8 +42,10 @@
   <script>
     'use strict';
 
-    const num = 5;
+    const num = 10;
     const winner = Math.floor(Math.random() * num); // 0 - 4
+    const chu=1;
+    const sho=2;
 
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
@@ -51,9 +53,15 @@
       
       div.addEventListener('click', () => {
         if (i === winner) {
-          div.textContent = 'Win!';
+          div.textContent = '大吉';
           div.classList.add('daikichi');
-        } else {
+        }else if(i===chu){
+          div.textContent = '中吉!';
+          div.classList.add('chukichi');
+        }else if(i===sho){
+          div.textContent = '中吉!';
+          div.classList.add('chukichi');
+        }else {
           div.textContent = 'Lose!';
           div.classList.add('kyo');
         }
